@@ -33,23 +33,42 @@
             </div>
         </div>
 
-        <!-- Menú de selección de fecha -->
+        <!-- selección de fecha -->
         <div class="date-selection">
             <h2>Selecciona una fecha:</h2>
-            <select id="date-dropdown" onchange="showRooms()">
-                <option value="">-- Selecciona una fecha --</option>
-                <option value="2023-10-01">1 de Octubre, 2023</option>
-                <option value="2023-10-02">2 de Octubre, 2023</option>
-                <option value="2023-10-03">3 de Octubre, 2023</option>
-            </select>
+            <input type="date" id="date-picker" onchange="showRooms()">
         </div>
 
-        <!-- Contenedor para mostrar las salas disponibles -->
-        <div id="rooms-container" class="rooms-container">
-            <!-- Aquí se cargarán las salas dinámicamente -->
+         <!-- Contenedor salas disponibles -->
+        <div id="rooms-container" class="rooms-container" style="display: none;">
+            <h3>Salas disponibles:</h3>
+            <div class="rooms">
+                <button class="room-btn" data-room="Sala 1" onclick="showSeats()">Sala 1</button>
+                <button class="room-btn" data-room="Sala 2" onclick="showSeats()">Sala 2</button>
+                <button class="room-btn" data-room="Sala 3" onclick="showSeats()">Sala 3</button>
+            </div>
+        </div>
+
+
+        <!-- Ventana de compra de boletos -->
+        <div id="seats-overlay" class="seats-overlay" style="display: none;">
+            <div class="seats-modal">
+                <h3>Selecciona tus asientos</h3>
+                <div id="seats-container" class="seats-container">
+                    <!-- Asientos dinámicamente generados aquí -->
+                </div>
+                <button onclick="closeSeats()">Cerrar</button>
+            </div>
         </div>
     </div>
 
     <script src="js/Ficha_de_pelicula.js"></script> 
+
+    <footer>
+        <nav class="footer-nav">
+            <a href="#"><img src="img/facebook.png" alt="Facebook" width="30" height="30"></a>
+            <a href="#"><img src="img/twitter.png" alt="Twitter" width="30" height="30"></a>
+        </nav>
+    </footer>    
 </body>
 </html>

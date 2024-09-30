@@ -88,7 +88,7 @@ nav ul li a:hover {
 }
 
 .filter-btn:hover, .filter-btn.active {
-    background-color: #0056b3;
+    background-color: #5a00b3;
     color: white;
 }
 
@@ -123,7 +123,7 @@ main {
 .movie-thumbnail {
     border-radius: 10px;
     height: 200px;
-    width: 200px;
+    width: auto;
 }
 
 

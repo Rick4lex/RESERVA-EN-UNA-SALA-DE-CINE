@@ -1,38 +1,46 @@
 function showRooms() {
-    const roomsContainer = document.getElementById("rooms-container");
-    const selectedDate = document.getElementById("date-dropdown").value;
+    const datePicker = document.getElementById('date-picker').value;
+    const roomsContainer = document.getElementById('rooms-container');
 
-    // Limpiar el contenido de las salas anteriores
-    roomsContainer.innerHTML = "";
-
-    if (selectedDate === "2023-10-01") {
-        roomsContainer.innerHTML = `
-            <h3>Salas disponibles para el 1 de Octubre, 2023</h3>
-            <ul>
-                <li>Sala 1 - 18:00</li>
-                <li>Sala 2 - 20:00</li>
-                <li>Sala 3 - 22:00</li>
-            </ul>
-        `;
-    } else if (selectedDate === "2023-10-02") {
-        roomsContainer.innerHTML = `
-            <h3>Salas disponibles para el 2 de Octubre, 2023</h3>
-            <ul>
-                <li>Sala 1 - 17:00</li>
-                <li>Sala 2 - 19:00</li>
-                <li>Sala 3 - 21:00</li>
-            </ul>
-        `;
-    } else if (selectedDate === "2023-10-03") {
-        roomsContainer.innerHTML = `
-            <h3>Salas disponibles para el 3 de Octubre, 2023</h3>
-            <ul>
-                <li>Sala 1 - 16:00</li>
-                <li>Sala 2 - 18:00</li>
-                <li>Sala 3 - 20:00</li>
-            </ul>
-        `;
+    if (datePicker) {
+        roomsContainer.style.display = 'block';
     } else {
-        roomsContainer.innerHTML = "<p>Selecciona una fecha para ver las salas disponibles.</p>";
+        roomsContainer.style.display = 'none';
     }
+}
+
+// Mostrar modal de asientos cuando se selecciona una sala
+function showSeats() {
+    const seatsOverlay = document.getElementById('seats-overlay');
+    const seatsContainer = document.getElementById('seats-container');
+
+    // Limpiar asientos previos
+    seatsContainer.innerHTML = '';
+
+    // Crear 25 asientos dinámicamente
+    for (let i = 0; i < 25; i++) {
+        const seat = document.createElement('div');
+        seat.classList.add('seat');
+        
+        // Simular asientos ocupados aleatoriamente
+        if (Math.random() > 0.7) {
+            seat.classList.add('occupied');
+        }
+
+        seat.addEventListener('click', () => {
+            if (!seat.classList.contains('occupied')) {
+                seat.classList.toggle('selected');
+            }
+        });
+
+        seatsContainer.appendChild(seat);
+    }
+
+    seatsOverlay.style.display = 'flex';
+}
+
+// Cerrar el modal de selección de asientos
+function closeSeats() {
+    const seatsOverlay = document.getElementById('seats-overlay');
+    seatsOverlay.style.display = 'none';
 }
