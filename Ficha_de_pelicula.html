@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Película</title>
+    <link rel="stylesheet" href="css/Ficha_de_pelicula.css">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="Landing_page.html">Home</a></li>
+            <li><a href="#">Quiénes Somos</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!--ficha de película -->
+    <div class="movie-container">
+        <h1>Ficha de la Película: Inception</h1>
+        <div class="movie-info">
+            <img src="img/inception.jpg" alt="Poster de Inception" class="movie-poster">
+            <div class="movie-details">
+                <h2>Ficha Técnica</h2>
+                <p><strong>Título:</strong> Inception</p>
+                <p><strong>Director:</strong> Christopher Nolan</p>
+                <p><strong>Duración:</strong> 148 minutos</p>
+                <p><strong>Género:</strong> Ciencia ficción, Acción</p>
+                <p><strong>Año:</strong> 2010</p>
+                <p><strong>Sinopsis:</strong> Un ladrón que posee la habilidad de infiltrarse en los sueños de los demás se le da una última oportunidad de redención, a cambio de realizar lo imposible: una inserción de ideas en la mente de su objetivo.</p>
+            </div>
+        </div>
+
+        <!-- Menú de selección de fecha -->
+        <div class="date-selection">
+            <h2>Selecciona una fecha:</h2>
+            <select id="date-dropdown" onchange="showRooms()">
+                <option value="">-- Selecciona una fecha --</option>
+                <option value="2023-10-01">1 de Octubre, 2023</option>
+                <option value="2023-10-02">2 de Octubre, 2023</option>
+                <option value="2023-10-03">3 de Octubre, 2023</option>
+            </select>
+        </div>
+
+        <!-- Contenedor para mostrar las salas disponibles -->
+        <div id="rooms-container" class="rooms-container">
+            <!-- Aquí se cargarán las salas dinámicamente -->
+        </div>
+    </div>
+
+    <script src="js/Ficha_de_pelicula.js"></script> 
+</body>
+</html>

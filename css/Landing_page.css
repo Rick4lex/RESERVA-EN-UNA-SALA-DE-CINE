@@ -120,6 +120,27 @@ main {
     height: 200px;
 }
 
+.movie-thumbnail {
+    border-radius: 10px;
+    height: 200px;
+    width: 200px;
+}
+
+
+.produccion button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.produccion button:hover {
+    background-color: #0056b3;
+}
+
 footer {
     background-color: #007bff;
     padding: 10px;
