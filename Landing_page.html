@@ -33,10 +33,11 @@
            
         </div>
         <!-- Sección de inicio de sesión -->
-        <div id="modal" class="modal">
+        <div id="modal" class="modal" style="display: none;">
             <div class="modal-content">
                 <span class="close" onclick="closeModal()">&times;</span>
-                <div id="login-form" class="form-section">
+
+                <div id="login-form" class="form-section" style="display: none;"> 
                     <h2>Iniciar Sesión</h2>
                     <form onsubmit="return validateLoginForm()">
                         <div class="form-group">
@@ -51,28 +52,19 @@
                         <p id="login-error-message"></p>
                     </form>
                 </div>
-    
+                <!-- Registro -->
+
                 <div id="register-form" class="form-section" style="display: none;">
                     <h2>Registro</h2>
-                    <form onsubmit="return validateRegisterForm()">
-                        <!-- Sección de Datos de Acceso -->
-                        <fieldset>
-                            <legend>Datos de Acceso</legend>
-                            <div class="form-group">
-                                <label for="register-email">Correo Electrónico:</label>
-                                <input type="email" id="register-email" name="email" placeholder="Ingresa tu correo" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="register-password">Contraseña:</label>
-                                <input type="password" id="register-password" name="password" placeholder="Ingresa tu contraseña" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="confirm-password">Confirmar Contraseña:</label>
-                                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirma tu contraseña" required>
-                            </div>
-                        </fieldset>
-                
-                        <!-- Sección de Datos Personales -->
+                    <!-- Indicador de pasos -->
+                    <div id="steps-indicator" class="steps-indicator">
+                        <span id="step1-indicator" class="step active">1</span>
+                        <span id="step2-indicator" class="step">2</span>
+                    </div>
+                    
+
+                    <!-- Sección de Datos Personales -->
+                    <div id="register-step1" style="display: block;">
                         <fieldset>
                             <legend>Datos Personales</legend>
                             <div class="form-group">
@@ -104,9 +96,26 @@
                                 <label for="birthdate">Fecha de Nacimiento:</label>
                                 <input type="date" id="birthdate" name="birthdate" required>
                             </div>
+                            <button type="button" onclick="goToStep(2)">Siguiente</button>
                         </fieldset>
-                
-                        <!-- Sección de Suscripción -->
+                    <!-- Sección de Datos de Acceso -->
+                    <div id="register-step2" style="display: none;"> 
+                        <fieldset>
+                            <legend>Datos de Acceso</legend>
+                            <div class="form-group">
+                                <label for="register-email">Correo Electrónico:</label>
+                                <input type="email" id="register-email" name="email" placeholder="Ingresa tu correo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="register-password">Contraseña:</label>
+                                <input type="password" id="register-password" name="password" placeholder="Ingresa tu contraseña" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm-password">Confirmar Contraseña:</label>
+                                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirma tu contraseña" required>
+                            </div>
+                        </fieldset>
+                        <!-- Check Suscripcion y Politicas -->
                         <div class="form-group">
                             <input type="checkbox" id="newsletter" name="newsletter">
                             <label for="newsletter">Deseo recibir en mi correo electrónico sin ningún costo el boletín informativo de Teatro Apolo S.A.</label>
