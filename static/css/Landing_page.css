@@ -131,7 +131,7 @@ header nav ul li a:hover, .login-btn:hover, .register-btn:hover {
 
 h1 {
     margin-bottom: 20px;
-    color: #333;
+    color: #fdfdfd;
 }
 
 h2 {
@@ -160,44 +160,37 @@ h2 {
 }
 
 fieldset {
-    border: 1px solid #000000;
+    border: 1px solid #e4e3e3;
     padding: 10px;
     margin-bottom: 15px;
     border-radius: 5px;
 }
 
-.steps-indicator {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.step {
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
+/* Indicadores de pasos */
+.step-indicator {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
     margin: 0 5px;
     text-align: center;
-    border: 2px solid #ccc;
+    line-height: 20px;
+    justify-content: center;
+    border: 2px solid gray;
     border-radius: 50%;
-    font-size: 14px;
-    color: #999;
-    background: #f9f9f9;
+    background-color: lightgray;
+    color: black;
 }
 
-.step.active {
+
+.step-indicator.active {
     border-color: #007bff;
     background: #007bff;
-    color: #fff;
+    color: #ffffff;
 }
 
-/* Estilo para ocultar y mostrar pasos */
-#register-step1, #register-step2 {
-    display: none; /* Por defecto, están ocultos */
-}
-
-#register-step1.active, #register-step2.active {
-    display: block; /* Cuando está activo, se muestra */
+/* Ocultar por defecto los pasos no activos */
+.register-step {
+    display: none;
 }
 
 legend {
