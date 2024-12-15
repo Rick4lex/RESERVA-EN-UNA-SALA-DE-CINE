@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import Footer from './components/Footer';
 import Header from './components/Header';
 import MovieList from "./components/MovieList";
@@ -22,6 +23,8 @@ const App: React.FC = () => {
       </main>
       
       <Footer />
+      {/* Integración de Speed Insights */}
+      <SpeedInsights />
     </div>
     </Router>
   );
