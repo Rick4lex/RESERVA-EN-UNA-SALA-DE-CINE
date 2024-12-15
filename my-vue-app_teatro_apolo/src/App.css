@@ -20,6 +20,7 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  
 }
 
 .header nav ul {
@@ -32,6 +33,7 @@ html {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  color: inherit;
 }
 
 .header img {
@@ -189,6 +191,7 @@ button:hover {
 
 .ficha-btn {
   width: 100%;
+
 }
 
 button.submit-btn:hover {
@@ -282,14 +285,19 @@ button.submit-btn:hover {
 /* Encabezado de la película */
 .movie-reservation .movie-header { 
   display: flex;
-  gap: 20px;
+  gap: 70px;
   margin-bottom: 20px;
-  align-items: center;
+  justify-content: space-around;
+}
+
+.movie-container {
+  justify-content: center;
+  padding: 70px;
 }
 
 .movie-header img {
-  float: left;
-  width: 200px;
+  float: right;
+  width: 350px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -377,7 +385,9 @@ button.submit-btn:hover {
 
 .room-cards {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
+  padding: 7px;
+  justify-content: center;
 }
 
 .room-card {
@@ -385,11 +395,13 @@ button.submit-btn:hover {
   border: 1px solid #ccc;
   cursor: pointer;
   border-radius: 5px;
+  
 }
 
 .room-card.selected {
-  border-color: #6c5ce7;
-  background-color: #f0f0ff;
+  border-color: #333;
+  background-color: #8b4fd9;
+  color: white;
 }
 
 .seat-map {

@@ -27,6 +27,11 @@ const Header: React.FC = () => {
     window.location.reload();
   };
 
+  const landingPage = () => {
+  window.location.href = "../";
+};
+
+
 
   // Funciones para abrir y cerrar el modal
   const openLogin = () => {
@@ -45,7 +50,7 @@ const Header: React.FC = () => {
     <div>
       <header className="header">
       <div className="logo"><img src="https://res.cloudinary.com/dyeppbrfl/image/upload/v1732319895/logo_fg1auz.png"></img> </div>
-      <h1>Teatro Apolo</h1>
+      <h1> <span onClick={landingPage} style={{ cursor: "pointer" }}> Teatro Apolo </span> </h1>
       <nav>
         <ul>
           {/* agregar enlaces de navegación */}

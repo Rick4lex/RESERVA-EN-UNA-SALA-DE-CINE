@@ -95,12 +95,6 @@ const MoviePage: React.FC = () => {
     <div className="movie-reservation">
       {/* Encabezado */}
       <div className="movie-header">
-        <img src={movie.imgSrc} alt={movie.title} />
-        <div className="movie-details">
-          <h1>{movie.title}</h1>
-          <p>Director: {movie.director}</p>
-          <p>Género: {movie.genre}</p>
-        </div>
         {/* YouTube Video */}
           <div className="trailer-section">
             <h2>Trailer</h2>
@@ -110,6 +104,14 @@ const MoviePage: React.FC = () => {
               <p>No hay tráiler disponible.</p>
             )}
           </div>
+        
+          <div className="movie-details">
+            <h1>{movie.title}</h1>
+            <p>Director: {movie.director}</p>
+            <p>Género: {movie.genre}</p>
+
+          </div>
+            <img src={movie.imgSrc} alt={movie.title} />
       </div>
       </div>
       {/* Step Progress */}

@@ -22,7 +22,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ id, imgSrc, title, director, genr
         <strong>Género:</strong> {genre}
       </p>
       <button className='ficha-btn'>
-        <Link to={`/movie/${id}`}>Ver ficha</Link>
+        <Link to={`/movie/${id}`}>Ver ficha </Link>
       </button>
     </div>
   );
