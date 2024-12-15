@@ -5,9 +5,11 @@ La web **Teatro Apolo** es una plataforma innovadora que funciona para la admini
 ## Características Principales
 ### Formulario de Inicio de Sesión
 - El formulario de inicio de sesión está diseñado para ser sencillo, seguro y eficiente, facilitando el acceso a los usuarios registrados
+    ![image](https://github.com/user-attachments/assets/eefee2b7-85cb-414a-b770-be0049306d35)
 
 ### Formulario de Registro
 - El registro de nuevos usuarios está pensado para captar datos esenciales sin saturar al usuario.
+    ![image](https://github.com/user-attachments/assets/9001a6ed-4f92-4883-aba7-5adcd68d7ade)
 
 **Características clave**:
 - Validación de contraseña segura (mínimo de caracteres, símbolos, etc.).
