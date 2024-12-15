@@ -10,11 +10,11 @@ La web **Teatro Apolo** es una plataforma innovadora que funciona para la admini
 - El registro de nuevos usuarios está pensado para captar datos esenciales sin saturar al usuario.
 
 **Características clave**:
-      - Validación de contraseña segura (mínimo de caracteres, símbolos, etc.).
-      - Verificación del correo electrónico mediante enlace de activación.
-      - Prevención de cuentas duplicadas.
-      - Almacenamiento seguro de contraseñas con encriptación (bcrypt).
-      - Registro con interacción mínima y UX optimizada.
+- Validación de contraseña segura (mínimo de caracteres, símbolos, etc.).
+- Verificación del correo electrónico mediante enlace de activación.
+- Prevención de cuentas duplicadas.
+- Almacenamiento seguro de contraseñas con encriptación (bcrypt).
+- Registro con interacción mínima y UX optimizada.
 
 ### Interacción con las Películas
 - La interacción con las películas está diseñada para ser dinámica y participativa, inspirada en plataformas como Rotten Tomatoes, pero con un enfoque de análisis de culto.
@@ -59,9 +59,9 @@ Imágenes utilizadas en los foros provendrán de una biblioteca interna, asegura
 
 ### Análisis Cinematográfico
 - Espacios dedicados a desmenuzar las películas en profundidad:
-      - Trama y subtrama.
-      - Técnicas y encuadres.
-      - Desarrollo de personajes.
+  <Trama_y_subtrama.>
+  <Técnicas_y_encuadres.>
+  <Desarrollo_de_personajes.>
 - Contenido presentado en formato de artículos, discusiones y destacados por administradores.
 
 ### Sistema de Alquiler y Acceso Gratuito
