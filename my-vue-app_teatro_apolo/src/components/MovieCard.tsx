@@ -7,7 +7,7 @@ interface MovieCardProps {
   title: string;
   director: string;
   genre: string;
-  link: string;
+  youtubeId: string;
 }
 
 const MovieCard: React.FC<MovieCardProps> = ({ id, imgSrc, title, director, genre, }) => {

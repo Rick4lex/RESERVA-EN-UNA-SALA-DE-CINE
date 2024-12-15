@@ -8,7 +8,7 @@ interface Movie {
   director: string;
   genre: string;
   imgSrc: string;
-  link: string;
+  youtubeId: string;
 }
 
 const MovieList: React.FC = () => {
@@ -38,7 +38,7 @@ const MovieList: React.FC = () => {
           title={movie.title}
           director={movie.director}
           genre={movie.genre}
-          link={movie.link} id={0}        />
+          youtubeId={movie.youtubeId} id={movie.id}        />
       ))}
     </section>
   );

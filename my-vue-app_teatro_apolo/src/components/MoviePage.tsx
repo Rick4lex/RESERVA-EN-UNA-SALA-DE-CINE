@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import supabase from "../ServerBackend/Supabase";
@@ -10,15 +11,24 @@ interface Seat {
   status: "available" | "occupied" | "unavailable" | "selected";
 }
 
+interface Movie {
+  title: string;
+  director: string;
+  genre: string;
+  imgSrc: string;
+  youtubeId: string;
+}
+
+
 const MoviePage: React.FC = () => {
   const { id } = useParams();
-  const [movie, setMovie] = useState<any>(null);
+  const [movie, setMovie] = useState<Movie | null>(null);
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedRoom, setSelectedRoom] = useState<string | null>(null);
   const [selectedSeats, setSelectedSeats] = useState<string[]>([]);
   const [step, setStep] = useState(1);
   const [seats, setSeats] = useState<Seat[][]>([]);
-  const [youtubeId, setYoutubeId] = useState<string>("RV9L7ui9Cn8"); // Ejemplo
+  const [youtubeId, setYoutubeId] = useState<string>(""); // Ejemplo
 
   // Generar última semana
   const lastWeekDays = Array.from({ length: 7 }, (_, i) => {
@@ -37,36 +47,43 @@ const MoviePage: React.FC = () => {
   // Cargar info de película
   useEffect(() => {
     const fetchMovie = async () => {
-      const { data } = await supabase.from("movies").select("*").eq("id", id).single();
+      const { data, error } = await supabase.from("movies").select("title, director, genre, imgSrc, youtubeId").eq("id", id).single();
+       if (error) {
+        console.error("Error al cargar la película:", error.message);
+        return;
+      }
+
       setMovie(data);
+      setYoutubeId(data.youtubeId || "");
     };
-    initializeSeats();
-    fetchMovie();
-  }, [id]);
+
+  initializeSeats();
+  fetchMovie();
+}, [id]);
 
   // Generar sillas
   const initializeSeats = () => {
-    const seatGrid: Seat[][] = [];
-    const rows = ["A", "B", "C", "D", "E", "F", "G", "H", "I"];
-    for (const row of rows) {
-      const rowSeats = Array.from({ length: 10 }, (_, i) => ({
-        row,
-        col: i + 1,
-        status: Math.random() < 0.1 ? "occupied" : "available",
-      }));
-      seatGrid.push(rowSeats);
-    }
-    setSeats(seatGrid);
-  };
+  const seatGrid: Seat[][] = [];
+  const rows = ["A", "B", "C", "D"];
+  for (const row of rows) {
+    const rowSeats: Seat[] = Array.from({ length: 7 }, (_, i) => ({
+      row,          // Fila
+      col: i + 1,   // Numero de columna
+      status: Math.random() < 0.1 ? "occupied" : "available", // Solo valores válidos
+    }));
+    seatGrid.push(rowSeats);
+  }
+  setSeats(seatGrid);
+};
+
 
   const handleSeatClick = (row: string, col: number) => {
-    const seatId = `${row}${col}`;
-    setSelectedSeats((prev) =>
-      prev.includes(seatId)
-        ? prev.filter((seat) => seat !== seatId)
-        : [...prev, seatId]
-    );
-  };
+  const seatId = `${row}${col}`;
+  setSelectedSeats((prev) =>
+    prev.includes(seatId) ? prev.filter((seat) => seat !== seatId) : [...prev, seatId]
+  );
+};
+
 
   const handleStepChange = (nextStep: number) => {
     setStep(nextStep);
@@ -85,10 +102,14 @@ const MoviePage: React.FC = () => {
           <p>Género: {movie.genre}</p>
         </div>
         {/* YouTube Video */}
-            <div className="trailer-section">
-                <h2>Trailer</h2>
-                <YouTube videoId={youtubeId} opts={{ width: "100%"}} />
-            </div>
+          <div className="trailer-section">
+            <h2>Trailer</h2>
+            {youtubeId ? (
+              <YouTube videoId={youtubeId} opts={{ width: "100%" }} />
+            ) : (
+              <p>No hay tráiler disponible.</p>
+            )}
+          </div>
       </div>
       </div>
       {/* Step Progress */}
@@ -182,7 +203,7 @@ const MoviePage: React.FC = () => {
       
     </div>
   ) : (
-    <p>Cargando...</p>
+  <p>Estamos cargando la información de la película...</p>
   );
 };
 
