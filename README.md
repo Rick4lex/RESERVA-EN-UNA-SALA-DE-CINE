@@ -3,13 +3,24 @@
 La web **Teatro Apolo** es una plataforma innovadora que funciona para la administracion del espacio físico en un ambiente digital. para complementar  la proyección y análisis de películas pioneras y de culto. A diferencia del cine comercial, El publico objetivo son los cinéfilos y apasionados del cine, por lo que se les brindara un entorno donde puedan explorar, debatir y analizar películas destacadas por su trama, subtrama, composición, personajes, técnicas, encuadres, entre otros aspectos, creando una experiencia enriquecedora y colaborativa. Enfoque dirigido a películas con un carácter filosófico, menos ligadas a los grandes éxitos de taquilla, y que abordan narrativas profundas y técnicas cinematográficas excepcionales.
 
 ## Características Principales
-### Formulario de Inicio de Sesión
-- El formulario de inicio de sesión está diseñado para ser sencillo, seguro y eficiente, facilitando el acceso a los usuarios registrados
-    ![image](https://github.com/user-attachments/assets/eefee2b7-85cb-414a-b770-be0049306d35)
+<table>
+<tr>
+<td width="50%">
+<h3 align="center">Formulario de Inicio de Sesión</h3>
+<div align="center" style="margin: 10">
+<a href="/" target="_blank"><img src="https://github.com/user-attachments/assets/eefee2b7-85cb-414a-b770-be0049306d35" width="400" alt="log in" ></a>
+<p>El formulario de inicio de sesión está diseñado para ser sencillo, seguro y eficiente, facilitando el acceso a los usuarios registrados.</p>
+</div>                                                                                  
+</td>
 
-### Formulario de Registro
-- El registro de nuevos usuarios está pensado para captar datos esenciales sin saturar al usuario.
-    ![image](https://github.com/user-attachments/assets/9001a6ed-4f92-4883-aba7-5adcd68d7ade)
+<td width="50%">
+<h3 align="center">Formulario de Registro</h3>
+<div align="center">                                       
+<a href="/" target="_blank"><img src="https://github.com/user-attachments/assets/9001a6ed-4f92-4883-aba7-5adcd68d7ade" width="400" alt="sing in" border="10" ></a>
+</p>El registro de nuevos usuarios está pensado para captar datos esenciales sin saturar al usuario.</p>
+</div> 
+</td>
+</table> 
 
 **Características clave**:
 - Validación de contraseña segura (mínimo de caracteres, símbolos, etc.).
