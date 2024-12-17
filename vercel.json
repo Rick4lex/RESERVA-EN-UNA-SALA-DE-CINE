@@ -1,6 +1,11 @@
 {
-  "build": {
-    "command": "npm run build",
-    "output": "my-vue-app_teatro_apolo/dist"
-  }
+  "builds": [
+    {
+      "src": "my-vue-app_teatro_apolo/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "my-vue-app_teatro_apolo/dist"
+      }
+    }
+  ]
 }
