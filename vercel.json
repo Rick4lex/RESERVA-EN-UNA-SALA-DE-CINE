@@ -1,6 +1,6 @@
 {
   "build": {
     "command": "npm run build",
-    "output": "my-vue-app_teatro_apollo/dist"
+    "output": "my-vue-app_teatro_apolo/dist"
   }
 }
