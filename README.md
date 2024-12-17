@@ -1,4 +1,7 @@
 ![JPG_sEPT_banner (1)](https://github.com/user-attachments/assets/8eff9b82-e8c0-41c7-8f4f-a5a50a1314d7)
+<a href="https://my-vue-app-teatro-apolo.vercel.app//" target="_blank">
+<img src="https://img.shields.io/badge/-vercel deploy-green?style=for-the-badge&color=7761d3">
+</a>
 
 La web **Teatro Apolo** es una plataforma innovadora que funciona para la administracion del espacio físico en un ambiente digital. para complementar  la proyección y análisis de películas pioneras y de culto. A diferencia del cine comercial, El publico objetivo son los cinéfilos y apasionados del cine, por lo que se les brindara un entorno donde puedan explorar, debatir y analizar películas destacadas por su trama, subtrama, composición, personajes, técnicas, encuadres, entre otros aspectos, creando una experiencia enriquecedora y colaborativa. Enfoque dirigido a películas con un carácter filosófico, menos ligadas a los grandes éxitos de taquilla, y que abordan narrativas profundas y técnicas cinematográficas excepcionales.
 
