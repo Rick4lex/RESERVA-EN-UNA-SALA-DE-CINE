@@ -1,4 +1,4 @@
-![JPG_sEPT_banner (1)](https://github.com/user-attachments/assets/8eff9b82-e8c0-41c7-8f4f-a5a50a1314d7)
+![banner](https://github.com/user-attachments/assets/8eff9b82-e8c0-41c7-8f4f-a5a50a1314d7)
 <a href="https://my-vue-app-teatro-apolo.vercel.app//" target="_blank">
 <img src="https://img.shields.io/badge/-vercel deploy-green?style=for-the-badge&color=7761d3">
 </a>
@@ -32,10 +32,42 @@ La web **Teatro Apolo** es una plataforma innovadora que funciona para la admini
 - Almacenamiento seguro de contraseñas con encriptación (bcrypt).
 - Registro con interacción mínima y UX optimizada.
 
-### Interacción con las Películas
-- La interacción con las películas está diseñada para ser dinámica y participativa, inspirada en plataformas como Rotten Tomatoes, pero con un enfoque de análisis de culto.
+<table>
+<tr>
+<td width="33%">
+<h3 align="center">Interacción con las Películas</h3>
+<div align="center" style="margin: 10">
+<a href="/" target="_blank"><img src="" width="400" alt="img" ></a>
+<p>La interacción con las películas está diseñada para ser dinámica y participativa, inspirada en plataformas como Rotten Tomatoes, pero con un enfoque de análisis de culto.</p>
+</div>                                                                                  
+</td>
+
+<td width="33%">
+<h3 align="center">Análisis Cinematográfico</h3>
+<div align="center">                                       
+<a href="/" target="_blank"><img src="" width="400" alt="img" border="10" ></a>
+  </p>Espacios dedicados a desmenuzar las películas en profundidad:</p>
+  <li>Trama y subtrama</li>
+  <li>Técnicas y encuadres</li>
+  <li>Desarrollo de personajes</li>
+  </p>Contenido presentado en formato de artículos, discusiones y destacados por administradores.</p>
+</div> 
+</td>
+
+<td width="33%">
+<h3 align="center">Foros de Discusión por Grupos</h3>
+<div align="center">                                       
+<a href="/" target="_blank"><img src="" width="400" alt="img" border="10" ></a>
+  </p>Los usuarios pueden unirse a grupos de discusión enfocados en películas específicas para fomentar debates y análisis.</p>
+  </p>El formato será similar a los comentarios en redes sociales, pero con un enfoque moderado y especializado.</p>
+  </p>Limitación para subir imágenes: solo se permitirán imágenes de la biblioteca propia del sitio.</p>
+  </p>Interacciones destacadas: comentarios relevantes podrán ser resaltados por el administrador o basados en interacciones.</p>
+</div> 
+</td>
+</table>
 
 **Características clave**:
+<br>
 Exploración de películas:
 - Catálogo de películas disponibles, con opciones de filtro por género, autor, técnicas o disponibilidad (alquiler/gratuito).
 - Vista detallada con sinopsis, duración, fecha de estreno, director y elenco.
@@ -47,6 +79,9 @@ Valoración y reseñas:
 Previsualización de trailers:
 - Reproducción de trailers y contenido adicional desde plataformas como YouTube.
 - Aspecto visual ajustado para una experiencia de visualización óptima (relación de aspecto amplia).
+
+Biblioteca Visual Propia
+- Imágenes utilizadas en los foros provendrán de una biblioteca interna, asegurando la coherencia visual y evitando contenido externo no autorizado.
 
 Marcado de favoritos:
 - Posibilidad de guardar películas en una lista personal de favoritos.
@@ -60,29 +95,12 @@ Marcado de favoritos:
 - Confirmación de la reserva con envío de correo electrónico y opción de descargar ticket digital.
 - Almacenamiento seguro de reservas con la relación de datos del usuario (ID) en la base de datos.
 
-### Foros de Discusión por Grupos
-- Los usuarios pueden unirse a grupos de discusión enfocados en películas específicas para fomentar debates y análisis.
-- El formato será similar a los comentarios en redes sociales, pero con un enfoque moderado y especializado.
-- Limitación para subir imágenes: solo se permitirán imágenes de la biblioteca propia del sitio.
-- Interacciones destacadas: comentarios relevantes podrán ser resaltados por el administrador o basados en interacciones.
-
 ### Contenido Curado
 - Disponibilidad de películas seleccionadas, disponibles para alquiler o acceso gratuito.
 - Inspiración en plataformas como Rotten Tomatoes, pero con una curaduría más especializada en cine de culto y análisis profundo.
 
-### Biblioteca Visual Propia
-Imágenes utilizadas en los foros provendrán de una biblioteca interna, asegurando la coherencia visual y evitando contenido externo no autorizado.
-
-### Análisis Cinematográfico
-- Espacios dedicados a desmenuzar las películas en profundidad:
-  <Trama_y_subtrama.>
-  <Técnicas_y_encuadres.>
-  <Desarrollo_de_personajes.>
-- Contenido presentado en formato de artículos, discusiones y destacados por administradores.
-
 ### Sistema de Alquiler y Acceso Gratuito
 - Los usuarios podrán acceder a películas por un modelo de alquiler o explorar un catálogo gratuito seleccionado por los curadores.
-
 
 ### Interacciones Dinámicas
 - Se destacarán las películas más discutidas y los comentarios más relevantes dentro de los grupos.
